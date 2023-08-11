@@ -1,4 +1,4 @@
-import { getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup } from "firebase-auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase-auth";
 import { app } from './app.js';
 
 
@@ -7,7 +7,12 @@ export const auth = getAuth(app);
 export function login(){
   const googleProvider = new GoogleAuthProvider();
 
-  signInWithPopup(auth,googleProvider);
+  return signInWithPopup(auth,googleProvider);
+}
+
+export function loginGitHub(){
+  const githubProvider = new GithubAuthProvider();
+  return signInWithPopup(auth, githubProvider);
 }
 
 

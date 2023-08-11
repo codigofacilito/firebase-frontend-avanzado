@@ -5,6 +5,7 @@
     "module"
   ],
   "imports": {
+    "baobab": "https://ga.jspm.io/npm:baobab@2.6.1/dist/baobab.js",
     "firebase-app": "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js",
     "firebase-auth": "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js",
     "lit": "https://ga.jspm.io/npm:lit@2.7.6/index.js",
@@ -13,6 +14,7 @@
   "scopes": {
     "https://ga.jspm.io/": {
       "@lit/reactive-element": "https://ga.jspm.io/npm:@lit/reactive-element@1.6.2/development/reactive-element.js",
+      "emmett": "https://ga.jspm.io/npm:emmett@3.2.0/emmett.js",
       "lit-element/lit-element.js": "https://ga.jspm.io/npm:lit-element@3.3.3/development/lit-element.js",
       "lit-html": "https://ga.jspm.io/npm:lit-html@2.8.0/development/lit-html.js",
       "lit-html/is-server.js": "https://ga.jspm.io/npm:lit-html@2.8.0/development/is-server.js"

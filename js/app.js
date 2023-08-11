@@ -1,5 +1,9 @@
 import { initializeApp } from "firebase-app";
 import mustache from 'mustache';
+import { Nav } from "./components/nav.js";
+import tree from './state.js';
+import { Home } from "./components/home.js";
+import { Error } from "./components/error.js";
 
 
 const firebaseConfig = {
@@ -14,15 +18,15 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 
-import('./auth.js').then(function ({ login, logout, auth }){
-  let navTemplate = document.querySelector("#main-header template").innerHTML;
-  
+import('./auth.js').then(function ({ auth }){
   auth.onAuthStateChanged(function(user){
-    let result = mustache.render(navTemplate,{ user });
-    document.querySelector("#main-header").innerHTML = result;
-    
-    
-    document.querySelector("#login")?.addEventListener("click",login);
-    document.querySelector("#logout")?.addEventListener("click",logout);
+    tree.select('user').set(
+      JSON.parse(JSON.stringify(user))
+    )
   });
 });
+
+
+customElements.define('app-nav', Nav);
+customElements.define('app-home', Home);
+customElements.define('app-error', Error);
