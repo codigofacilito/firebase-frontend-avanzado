@@ -39,7 +39,7 @@ export class Error extends LitElement {
   }
 
   render(){
-    if(!this.message) return; 
+    if(!this.message) return;
     return html`
       <div class='error'>
         <p> ${ this.message } </p>

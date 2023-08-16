@@ -1,5 +1,5 @@
 import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase-auth";
-import { app } from './app.js';
+import { app } from '../app.js';
 
 
 export const auth = getAuth(app);

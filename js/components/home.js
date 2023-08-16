@@ -24,6 +24,8 @@ export class Home extends LitElement{
       <img src="${this.user.photoURL}" alt="Foto de perfil">
       <h1> Dashboard </h1>
       <p> Bienvenido ${this.user.displayName} </p>
+      
+      <app-todo-list></app-todo-list>
     `;
   }
 }

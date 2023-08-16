@@ -52,7 +52,7 @@ export class Nav extends LitElement{
     super();
     this.user = null;
     
-    import('../auth.js').then(({ login, logout, loginGitHub }) => {      
+    import('../firebase/auth.js').then(({ login, logout, loginGitHub }) => {      
       
       this.login = function(){
         login().then(()=>{}).catch(err =>{
